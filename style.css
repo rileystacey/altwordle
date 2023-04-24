@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  #container {
+    display: flex;
+    background-color: rgb(54, 86, 114);
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #game {
+    background-color: rgb(54, 86, 114);
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 8% 60% 32%;
+  }
+  
+  header {
+    border-bottom: 1px solid rgb(54, 86, 114);
+  }
+  
+  .title {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.4rem 0 0.4rem 0;
+    text-align: center;
+    font-family: 'Castoro Titling', cursive;
+  }
+
+  .subtitle {
+    color: rgb(235, 222, 222);
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.4rem 0 0.4rem 0;
+    text-align: center;
+    font-family: 'Castoro Titling', cursive;
+  }
+  
+  #board-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 60%;
+  }
+  @media (max-width: 768px) {
+    #board {
+      width: 100%;
+      padding: 2em;
+    }
+  }
+  @media (min-width: 1440px) {
+    #board {
+      width: 100%;
+      padding: 2em;
+    }
+  }
+  
+  .square {
+    border: 2px solid rgb(201, 201, 201);
+    min-width: 1em;
+    min-height: 1em;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(201, 201, 201);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #keyboard-container {
+    height: 100%;
+    width: 95%;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 8px;
+    gap: 5px;
+    height: 3.5em;
+    touch-action: manipulation;
+  }
+  
+  .keyboard-row button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(212, 212, 213);
+    color: rgb(2, 2, 2);
+    flex-grow: 1;
+    text-transform: uppercase;
+    border-radius: 4px;
+    user-select: none;
+  }
+  
+  .keyboard-row button.wide-button {
+    flex-grow: 1.5;
+  }
+  
+  .spacer-half {
+    flex: 0.5;
+  }
+  
+  .wrongPlacement {
+    background-color: rgb(225, 225, 97) !important;
+    border-color: rgb(225, 225, 977) !important;
+  }
+  
+  .correctPlacement {
+    background-color: rgb(109, 109, 109) !important;
+    border-color: rgb(109, 109, 109) !important;
+  }
+  
+  .notInWord {
+    background-color: rgb(230, 49, 49) !important;
+    border-color: rgb(230, 49, 49) !important;
+  }
+
+#banner {
+    width: 100%;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    color: rgb(54, 86, 114);
+    font-family: 'Castoro Titling', cursive;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
